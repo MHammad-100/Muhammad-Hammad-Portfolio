@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 const bodyparser = require("body-parser");
 const PORT = process.env.PORT || 4000;
 const path = require("path");
-mongoose.connect("mongodb://localhost:27017/hamza",{
+mongoose.connect("mongodb+srv://Hammad:Hammad@cluster0.pbfho.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(()=>{
@@ -25,9 +25,36 @@ server.use('/font',express.static(path.resolve(__dirname,"assets/font")));
 server.use('/sass',express.static(path.resolve(__dirname,"assets/sass")));
 
 server.get("/", (req,res)=>{
-    res.render("index");
+    res.render("index", { data: "null"});
 })
-
+const MessageSchema = new mongoose.Schema({
+    name:{
+        type:String
+    },
+    email:{
+        type:String
+    },
+    message:{
+        type:String
+    }
+})
+const Message = mongoose.model("HamzaMessage", MessageSchema);
+server.post("/sendMessage", async(req,res)=>{
+    const data = new Message({
+        name: req.body.name,
+        email: req.body.email,
+        message: req.body.message
+    })
+   await data.save().then(()=>{
+       res.render("index", {data: "saved"});
+    }).catch(err=>{
+        console.log(err);
+    })
+})
+server.get("/messages", async(req, res)=>{
+    const data = await Message.find({});
+    res.render("messages", { data: data });
+})
 server.listen(PORT, ()=>{
     console.log(`server is running on http://localhost:${PORT}`);
 })

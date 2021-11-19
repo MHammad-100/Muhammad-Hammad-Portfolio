@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hamza Mansha</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+
+    <!--
+
+Edited By Muhammad Hammad Mansha
+
+-->
+</head>
+
+<body>
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class='uil uil-user'></i>Hamza Mansha</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link"><span data-hover="About">About</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/" class="nav-link"><span data-hover="Resume">Resume</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                        <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                            <i class="color-mode-icon"></i>
+                            Color mode
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </div>
+    <section class="contact py-5" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="contact-form">
+                        <h2 class="mb-4">These People Interested to work together. See Messages</h2>
+                        <% data.forEach(element=>{ %>
+                            <div>
+                                <form action="/sendMessage" method="post">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-12">
+                                            <input contenteditable="false" type="text" class="form-control"
+                                                value="Name:  <%= element.name%>" name="name" placeholder="Your Name"
+                                                id="name">
+                                        </div>
+
+                                        <div class="col-lg-6 col-12">
+                                            <input contenteditable="false" type="email" class="form-control"
+                                                name="email" value="Email: <%= element.email%>" placeholder="Email"
+                                                id="email">
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div style="height: 200px; overflow-y: auto;" name="message" class="form-control"
+                                                id="message" placeholder="Message">
+                                                Message: <%= element.message%>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <hr />
+                            <% }) %>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-12">
+                    <p class="copyright-text text-center">Copyright &copy; 2019 AH Soft . All rights reserved</p>
+                    <p class="copyright-text text-center">Edited by <a rel="nofollow"
+                            href="https://web.facebook.com/profile.php?id=100030165398325">Muhammad Hammad</a></p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
