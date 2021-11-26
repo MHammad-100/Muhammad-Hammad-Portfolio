@@ -634,3 +634,86 @@ b, strong {
 .bar.expert::before{
   width: calc(100% - 10px);
 }
+.community-page .site-pagination {
+	padding-top: 62px;
+}
+
+.community-warp {
+	max-width: 1367px;
+	margin: 0 auto;
+	background: rgba(253, 253, 253, 0.28);
+}
+
+.community-post-list {
+	list-style: none;
+}
+
+.community-post-list li {
+	padding: 33px 55px 65px;
+	margin-bottom: 21px;
+	overflow: hidden;
+	border: 1px solid #878787;
+	background: #1f2225;
+}
+.community-post-list .community-post .author-avator img {
+	width: 63px;
+	height: 63px;
+	border-radius: 50%;
+	float: left !important;
+  margin: 0px;
+}
+.community-post-list .community-post .post-content {
+	padding-left: 100px;
+}
+
+.community-post-list .community-post .post-content h5 {
+	font-size: 16px;
+	color: #ff205f;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+.community-post-list .community-post .post-content h5 span {
+	color: #7a7a7a;
+	padding-left: 18px;
+}
+
+.community-post-list .community-post .post-content p {
+	color: #fff;
+	margin-bottom: 5px;
+}
+
+.community-post-list .community-post .post-content .post-date {
+	font-size: 12px;
+	color: #ffb320;
+	margin-bottom: 18px;
+}
+
+.community-post-list .attachment-file {
+	padding-top: 60px;
+	max-width: 435px;
+}
+
+.community-top-title {
+	margin-bottom: 50px;
+}
+
+.community-filter {
+	margin-bottom: 80px;
+}
+
+.community-filter label {
+	font-size: 18px;
+	color: #1f2225;
+	font-weight: 500;
+	padding-right: 10px;
+}
+
+.community-filter select {
+	width: 201px;
+	height: 42px;
+	font-size: 14px;
+	padding: 0 18px;
+	color: #1f2225;
+	font-weight: 500;
+}

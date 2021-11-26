@@ -66,42 +66,36 @@ Edited By Muhammad Hammad Mansha
         </div>
     </nav>
     </div>
-    <section class="contact py-5" id="contact">
-        <div class="container">
+    <section class="page-section community-page set-bg" data-setbg="img/community-bg.jpg">
+        <div class="community-warp spad">
             <div class="row">
-                <div class="col-lg-6 col-12">
-                    <div class="contact-form">
-                        <h2 class="mb-4">These People Interested to work together. See Messages</h2>
-                        <% data.forEach(element=>{ %>
-                            <div>
-                                <form action="/sendMessage" method="post">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-12">
-                                            <input contenteditable="false" type="text" class="form-control"
-                                                value="Name:  <%= element.name%>" name="name" placeholder="Your Name"
-                                                id="name">
-                                        </div>
-
-                                        <div class="col-lg-6 col-12">
-                                            <input contenteditable="false" type="email" class="form-control"
-                                                name="email" value="Email: <%= element.email%>" placeholder="Email"
-                                                id="email">
-                                        </div>
-
-                                        <div class="col-12">
-                                            <div style="height: 200px; overflow-y: auto;" name="message" class="form-control"
-                                                id="message" placeholder="Message">
-                                                Message: <%= element.message%>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <hr />
-                            <% }) %>
-                    </div>
+                <div class="col-md-6" style="text-align: center; margin-top: 50px;">
+                    <h3 class="community-top-title">People Interested to work together</h3>
                 </div>
-
+            </div>
+            <div class="container">
+                <ul class="community-post-list">
+                    <% data.forEach(element=>{ %>
+                        <li>
+                            <div class="community-post">
+                                <div class="author-avator set-bg">
+                                    <img src="images/undraw/8.jpg" alt="">
+                                </div>
+                                <div class="post-content">
+                                    <h5>
+                                        <%= element.name %>
+                                    </h5>
+                                    <p style="color: darkslategray; margin: 0px;padding: 0px; overflow-x: auto;" >
+                                        <%= element.email%>
+                                    </p>
+                                    <p>
+                                        <%= element.message %>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <% }) %>
+                </ul>
             </div>
         </div>
     </section>
