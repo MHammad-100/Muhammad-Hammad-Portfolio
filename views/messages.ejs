@@ -66,38 +66,30 @@ Edited By Muhammad Hammad Mansha
         </div>
     </nav>
     </div>
-    <section class="page-section community-page set-bg" data-setbg="img/community-bg.jpg">
-        <div class="community-warp spad">
-            <div class="row">
-                <div class="col-md-6" style="text-align: center; margin-top: 50px;">
-                    <h3 class="community-top-title">People Interested to work together</h3>
+  
+    <section class="messages-section" >
+        <div class="heading-Messages" >
+            <h3>These People Wants To Work with you.</h3>
+        </div>
+        <% data.forEach(element=>{ %>
+        <div class="comment" >
+            <div class="user-img">
+                <img src="images/undraw/8.jpg" alt="">
+            </div>
+            <div class="user-info" >
+                <div>
+                    <span><%= element.name %></span>
+                    <p class="email" ><%= element.email%></p>
+                </div>
+                <div>
+                    <p>
+                        <%= element.message %>
+                    </p>
                 </div>
             </div>
-            <div class="container">
-                <ul class="community-post-list">
-                    <% data.forEach(element=>{ %>
-                        <li>
-                            <div class="community-post">
-                                <div class="author-avator set-bg">
-                                    <img src="images/undraw/8.jpg" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <h5>
-                                        <%= element.name %>
-                                    </h5>
-                                    <p style="color: darkslategray; margin: 0px;padding: 0px; overflow-x: auto;" >
-                                        <%= element.email%>
-                                    </p>
-                                    <p>
-                                        <%= element.message %>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <% }) %>
-                </ul>
-            </div>
+            <div style="clear: both;" ></div>
         </div>
+        <% }) %>
     </section>
     <footer class="footer py-5">
         <div class="container">

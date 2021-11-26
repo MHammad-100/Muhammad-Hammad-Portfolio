@@ -634,86 +634,64 @@ b, strong {
 .bar.expert::before{
   width: calc(100% - 10px);
 }
-.community-page .site-pagination {
-	padding-top: 62px;
+.heading-Messages{
+  margin: 50px;
 }
-
-.community-warp {
-	max-width: 1367px;
-	margin: 0 auto;
-	background: rgba(253, 253, 253, 0.28);
+.messages-section{
+  width: 80vw;
+  margin: 0 auto;
 }
-
-.community-post-list {
-	list-style: none;
+.comment{
+  background-color: #1f2225;
+  width: 100%;
+  padding: 30px;
+  margin-top: 10px;
+  position: relative;
+  height: fit-content;
 }
-
-.community-post-list li {
-	padding: 33px 55px 65px;
-	margin-bottom: 21px;
-	overflow: hidden;
-	border: 1px solid #878787;
-	background: #1f2225;
+.user-img
+{
+  width: 130px;
+  float: left;
+  display: flex;
+  justify-content: center;
 }
-.community-post-list .community-post .author-avator img {
-	width: 63px;
-	height: 63px;
-	border-radius: 50%;
-	float: left !important;
+.user-img img{
+  border-radius: 50%;
+  height: 63px;
+  width: 63px;
+}
+.user-info
+{
+  width: 80%;
+  padding: 10px;
+  float: left;
+}
+.user-info .email{
+  overflow-x: auto;
+  color:darkslategray;
+}
+.user-info span{
+  color: rgb(207, 12, 77);
+  font-size: 20px;
+}
+.user-info p{
+  color: white;
   margin: 0px;
+  padding: 0px;
 }
-.community-post-list .community-post .post-content {
-	padding-left: 100px;
-}
-
-.community-post-list .community-post .post-content h5 {
-	font-size: 16px;
-	color: #ff205f;
-	font-weight: 400;
-	margin-bottom: 10px;
-}
-
-.community-post-list .community-post .post-content h5 span {
-	color: #7a7a7a;
-	padding-left: 18px;
-}
-
-.community-post-list .community-post .post-content p {
-	color: #fff;
-	margin-bottom: 5px;
-}
-
-.community-post-list .community-post .post-content .post-date {
-	font-size: 12px;
-	color: #ffb320;
-	margin-bottom: 18px;
-}
-
-.community-post-list .attachment-file {
-	padding-top: 60px;
-	max-width: 435px;
-}
-
-.community-top-title {
-	margin-bottom: 50px;
-}
-
-.community-filter {
-	margin-bottom: 80px;
-}
-
-.community-filter label {
-	font-size: 18px;
-	color: #1f2225;
-	font-weight: 500;
-	padding-right: 10px;
-}
-
-.community-filter select {
-	width: 201px;
-	height: 42px;
-	font-size: 14px;
-	padding: 0 18px;
-	color: #1f2225;
-	font-weight: 500;
+@media only screen and (max-width:700px) {
+  .user-info{
+    float: none;
+    width: 100%;
+  }  
+  .user-img{
+    width: 70px;
+    float: none;
+  }
+  .user-img img{
+    width: 60px;
+    height: 60px;
+    
+  }
 }
