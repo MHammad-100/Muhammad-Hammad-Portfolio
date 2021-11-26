@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 4000;
 const path = require("path");
 // mongodb+srv://Hammad:Hammad@cluster0.pbfho.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 // mongodb://localhost:27017/hamzamessages
-mongoose.connect("mongodb://localhost:27017/hamzamessages",{
+mongoose.connect("mongodb+srv://Hammad:Hammad@cluster0.pbfho.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(()=>{
