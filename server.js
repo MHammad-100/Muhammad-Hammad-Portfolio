@@ -40,7 +40,7 @@ const MessageSchema = new mongoose.Schema({
         type:String
     }
 })
-const Message = mongoose.model("HamzaMessage", MessageSchema);
+const Message = mongoose.model("HammmadMessage", MessageSchema);
 server.post("/sendMessage", async(req,res)=>{
     const data = new Message({
         name: req.body.name,
